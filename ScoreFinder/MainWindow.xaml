@@ -1,0 +1,40 @@
+﻿<Window x:Class="ScoreFinder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ScoreFinder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="620" WindowStyle="None" AllowsTransparency="True" Background="#FF323232" BorderBrush="#FF969696" BorderThickness="1" ResizeMode="CanMinimize">
+	<Grid Margin="0,0,0.6,-1.4" Height="305" VerticalAlignment="Top">
+		<Rectangle x:Name="TitleBar" Fill="Black" HorizontalAlignment="Left" Height="35" Stroke="Black" VerticalAlignment="Top" Width="617" MouseDown="TitleBar_MouseDown"/>
+		<ScrollViewer x:Name="Tests" HorizontalAlignment="Left" Height="220" Margin="10,70,0,0" VerticalAlignment="Top" Width="170" BorderBrush="White" BorderThickness="4" Background="#FF282828">
+			<StackPanel x:Name="TestPanel" HorizontalAlignment="Left" Height="44" Margin="5,5,0,0" VerticalAlignment="Top" Width="143"/>
+		</ScrollViewer>
+		<Border BorderBrush="#FFE6E6E6" BorderThickness="1" HorizontalAlignment="Left" Height="220" Margin="10,70,0,0" VerticalAlignment="Top" Width="170"/>
+		<TextBlock HorizontalAlignment="Left" Height="24" Margin="190,40,0,0" TextWrapping="Wrap" Text="Tests To Take" VerticalAlignment="Top" Width="200" Foreground="White" FontSize="18" TextAlignment="Center"/>
+		<TextBlock HorizontalAlignment="Left" Height="24" Margin="10,40,0,0" TextWrapping="Wrap" Text="Test Scores" VerticalAlignment="Top" Width="170" Foreground="White" FontSize="18" TextAlignment="Center"/>
+		<TextBox x:Name="TestsToTake" HorizontalAlignment="Left" Height="24" Margin="190,70,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="200" Background="#FF1E1E1E" BorderBrush="#FFE6E6E6" BorderThickness="1" Foreground="White" FontSize="16" TextAlignment="Center" TextChanged="TestsToTake_TextChanged" PreviewTextInput="TestsToTake_PreviewTextInput"/>
+		<Rectangle Fill="Black" HorizontalAlignment="Left" Height="119" Margin="205,112,0,0" Stroke="Black" VerticalAlignment="Top" Width="0"/>
+		<Rectangle Fill="#FF1E1E1E" HorizontalAlignment="Left" Height="145" Margin="190,105,0,0" Stroke="#FFE6E6E6" VerticalAlignment="Top" Width="200" StrokeThickness="1"/>
+		<TextBlock HorizontalAlignment="Left" Height="28" Margin="195,148,0,0" TextWrapping="Wrap" Text=" Score:" VerticalAlignment="Top" Width="93" Foreground="White" FontSize="16"/>
+		<TextBox x:Name="TestScore" HorizontalAlignment="Left" Height="26" Margin="288,147,0,0" TextWrapping="Wrap" Text="25" VerticalAlignment="Top" Width="97" Foreground="White" FontSize="16" Background="#FF323232" TextAlignment="Center" TextChanged="TestScore_TextChanged" PreviewTextInput="TestScore_PreviewTextInput"/>
+		<TextBlock HorizontalAlignment="Left" Height="28" Margin="195,184,0,0" TextWrapping="Wrap" Text=" Out Of:" VerticalAlignment="Top" Width="93" Foreground="White" FontSize="16"/>
+		<TextBox x:Name="TestOutOf" HorizontalAlignment="Left" Height="26" Margin="288,183,0,0" TextWrapping="Wrap" Text="75" VerticalAlignment="Top" Width="97" Foreground="White" FontSize="16" Background="#FF323232" TextAlignment="Center" TextChanged="TestOutOf_TextChanged" PreviewTextInput="TestOutOf_PreviewTextInput"/>
+		<TextBlock HorizontalAlignment="Left" Height="28" Margin="195,218,0,0" TextWrapping="Wrap" Text=" Percent:" VerticalAlignment="Top" Width="93" Foreground="White" FontSize="16"/>
+		<TextBox x:Name="TestPercent" HorizontalAlignment="Left" Height="26" Margin="288,217,0,0" TextWrapping="Wrap" Text="33.3" VerticalAlignment="Top" Width="97" Foreground="White" FontSize="16" Background="#FF323232" TextAlignment="Center" TextChanged="TestPercent_TextChanged" PreviewTextInput="TestPercent_PreviewTextInput"/>
+		<Button x:Name="DeleleteTest" Content="Delete Current Test" HorizontalAlignment="Left" Height="30" Margin="190,260,0,0" VerticalAlignment="Top" Width="200" FontSize="16" RenderTransformOrigin="0.551,-0.584" Click="DeleleteTest_Click" Background="#FF1E1E1E" Foreground="White" BorderBrush="#FFE6E6E6"/>
+		<TextBlock HorizontalAlignment="Left" Height="24" Margin="410,40,0,0" TextWrapping="Wrap" Text="Average Score Needed" VerticalAlignment="Top" Width="200" Foreground="White" FontSize="18" TextAlignment="Center"/>
+		<TextBlock x:Name="Display" Height="97" Margin="406,119,0,89" TextWrapping="Wrap" Text="90%" VerticalAlignment="Center" FontSize="72" Foreground="White" HorizontalAlignment="Left" Width="196" TextAlignment="Center"/>
+		<TextBlock HorizontalAlignment="Left" Height="28" Margin="195,113,0,0" TextWrapping="Wrap" Text=" Name:" VerticalAlignment="Top" Width="70" Foreground="White" FontSize="16"/>
+		<TextBox x:Name="TestName" HorizontalAlignment="Left" Height="26" Margin="265,112,0,0" TextWrapping="Wrap" Text="Test 1" VerticalAlignment="Top" Width="120" Foreground="White" FontSize="16" Background="#FF323232" TextAlignment="Center" TextChanged="TestName_TextChanged"/>
+		<TextBox x:Name="ScoreNeeded" HorizontalAlignment="Left" Height="24" Margin="410,70,0,0" TextWrapping="Wrap" Text="78" VerticalAlignment="Top" Width="200" Background="#FF1E1E1E" BorderBrush="#FFE6E6E6" BorderThickness="1" Foreground="White" FontSize="16" TextAlignment="Center" PreviewTextInput="ScoreNeeded_PreviewTextInput" TextChanged="ScoreNeeded_TextChanged"/>
+		<TextBlock HorizontalAlignment="Left" Height="24" Margin="406,105,0,0" TextWrapping="Wrap" Text="Final Average" VerticalAlignment="Top" Width="200" Foreground="White" FontSize="18" TextAlignment="Center"/>
+		<TextBlock HorizontalAlignment="Left" Height="35" TextWrapping="Wrap" Text="Score Finder" VerticalAlignment="Top" Width="142" Margin="25,0,0,0" Foreground="White" FontSize="24" FontWeight="Bold"/>
+		<Button x:Name="Close" Content="X" HorizontalAlignment="Left" Height="35" Margin="582,0,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="2.413,0.392" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="18" FontWeight="Bold" Click="Close_Click"/>
+		<Button x:Name="Minimize" Content="-" HorizontalAlignment="Left" Height="35" Margin="547,0,0,0" VerticalAlignment="Top" Width="35" RenderTransformOrigin="2.413,0.392" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" FontSize="24" FontWeight="Bold" Click="Minimize_Click"/>
+		<TextBox x:Name="OutOfFinal" HorizontalAlignment="Left" Height="24" Margin="406,263,0,0" TextWrapping="Wrap" Text="100" VerticalAlignment="Top" Width="200" Background="#FF1E1E1E" BorderBrush="#FFE6E6E6" BorderThickness="1" Foreground="White" FontSize="16" TextAlignment="Center" TextChanged="TestsToTake_TextChanged" PreviewTextInput="TestsToTake_PreviewTextInput"/>
+		<TextBlock HorizontalAlignment="Left" Height="24" Margin="406,234,0,0" TextWrapping="Wrap" Text="Out of" VerticalAlignment="Top" Width="200" Foreground="White" FontSize="18" TextAlignment="Center"/>
+		<TextBlock x:Name="FinalScoreDisplay" HorizontalAlignment="Left" Height="24" Margin="406,210,0,0" TextWrapping="Wrap" Text="56" VerticalAlignment="Top" Width="200" Foreground="White" FontSize="18" TextAlignment="Center"/>
+	</Grid>
+</Window>
